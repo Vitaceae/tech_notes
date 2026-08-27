@@ -1,0 +1,4 @@
+[submodule "draft"]
+	path = draft
+	url = git@github.com:Vitaceae/draft.git
+	branch = main
