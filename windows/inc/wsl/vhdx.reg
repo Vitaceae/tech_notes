@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_USERS\S-1-5-21-25074728-3176145033-2448770649-1009\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{7bcaff0e-6fe4-490b-a76d-3f874c3fba1e}]
+"State"=dword:00000001
+"DistributionName"="test-machine"
+"Version"=dword:00000002
+"BasePath"="\\\\?\\D:\\wsl\\test-machine"
+"Flags"=dword:0000000f
+"DefaultUid"=dword:000003e8

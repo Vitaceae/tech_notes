@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
+"MS Shell Dlg 2"="Apple LiHei Pro"
+"MS Shell Dlg"="Apple LiHei Pro"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"PreloadFontFile"="Apple_Lihei_pro.ttf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize]
+"GUIFont.Facename"="Apple LiHei Pro"

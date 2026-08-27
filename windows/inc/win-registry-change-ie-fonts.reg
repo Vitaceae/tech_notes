@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\International\Scripts\25]
+"IEFixedFontName"="細明體"
+"IEFontSize"=hex:02,00,00,00
+"IEPropFontName"="Apple Lihei Pro"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\International\Scripts\3]
+"IEFixedFontName"="Courier New"
+"IEFontSize"=hex:02,00,00,00
+"IEPropFontName"="MACGrande"
+
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\International\Scripts\5]
+"IEFixedFontName"="Courier New"
+"IEPropFontName"="MACGrande"

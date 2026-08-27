@@ -1,0 +1,13 @@
+[wsl2]
+# Vmmem system resource limit
+memory=8GB
+# use 6 virtual processors
+processors=6
+# 8GB swap storage on my SSD(C:\)
+swap=8GB
+swapfile=C:\\Users\\mike\\work\\wsl-swap.vhdx
+localhostForwarding=true
+# Disable nested virtualization
+nestedVirtualization=false
+# show contents of dmesg when opening WSL
+debugConsole=false
