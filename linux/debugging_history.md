@@ -38,6 +38,8 @@ python3 -c "import socket, struct; s = socket.socket(socket.AF_INET, socket.SOCK
 python3 -c "import socket, struct; s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_RAW); s.setsockopt(1, 15, struct.pack('i', 1)); print('OK')"
 ```
 
+[c console app to test setsockopt](inc/debugging_history/test_setsockopt)
+
 使用 strace 檢查系統呼叫
 
 ```bash
