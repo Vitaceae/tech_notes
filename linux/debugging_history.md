@@ -6,6 +6,27 @@ draft: false
 
 # Linux Debugging History
 
+----
+## Page Allocation Failure
+
+>   page allocation failure. order:4, mode:0xd0
+
+策略: 釋放記憶體並觀察問題是否存續  
+
+```bash
+# 1. 觀察 kernel Buddy Allocator 的 Allocation Order
+$ cat /proc/buddyinfo
+
+# 2. 釋放 cache
+$ echo 3 > /proc/sys/vm/drop_caches
+
+# 3. 壓縮記憶體
+$ echo 1 > /proc/sys/vm/compact_memory
+
+# 4. 檢查 Buddy Allocator
+```
+
+----
 ## Check if RTSP Server is Running
 
 ```bash
@@ -20,7 +41,8 @@ $ ps aux|grep 800
 root         800  ...
 ```
 
-## SO_REUSEPORT not supported
+----
+## SO_REUSEPORT Not Supported
 
 + setsockopt() 回報錯誤，不支援 SO_REUSEPORT
 + EOPNOTSUPP (Operation not supported)
