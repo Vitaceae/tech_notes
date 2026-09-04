@@ -51,3 +51,36 @@ draft: false
     + fstab 補上 /var/volatile
 3. 由 systemd 接管掛載服務
     + systemd 依據正確的 target 順序 (Dependency Graph) 啟動 Mount Unit。
+
+```mermaid
+graph TD
+    A[Mount OverlayFS at boot] --> B{/var/volatile NOT in BSP fstab?}
+    
+    %% 路徑 1: 缺少掛載
+    B -- YES --> C[tmpfs was not mounted on /var/volatile]
+    C --> F[OverlayFS cannot find Lower/Upper/Work paths]
+    
+    %% 路徑 2: 順序競爭 / 掛載點衝突
+    B -- NO --> D{Set up mount point<br/>Race condition}
+    D -- mount point is /tmp<br/>(old setting) --> F
+    D -- systemd-tmpfiles incomplete --> F
+    
+    %% 失敗結果
+    F --> G[FAILED to mount OverlayFS]
+    
+    %% 成功路徑
+    D -- mount OK<br/>tmpfiles completed --> H[Mounting OverlayFS succeeded]
+    
+    %% Patch 修正方案標註
+    subgraph Patch 修正對策 [ ]
+        P1["Patch: add `/var/volatile tmpfs` to fstab"] -.-> B
+        P2["Patch: change mount point `/tmp` to `/mnt/overlay`"] -.-> D
+        P3["Patch: enable OverlayFS only for read-only-rootfs"] -.-> A
+        P4["Patch: Delegate .mount file to systemd (SYSTEMD_SERVICE)"] -.-> H
+    end
+
+    style P1 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style P2 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style P3 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style P4 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+```
