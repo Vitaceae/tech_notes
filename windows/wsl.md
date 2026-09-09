@@ -203,13 +203,20 @@ export PATH=/mnt/c/Windows:$PATH
 ----
 ## Trim WSL File System Size
 
-On WSL
+壓縮 WSL 檔案系統使用空間
 
 ```bash
 $ sudo fstrim /
 ```
 
-On Windows
+獲得 Windows 虛擬機鏡像目錄
+
+```bash
+# <distribution-name> 為目標虛擬機名稱
+> (Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss | Where-Object { $_.GetValue("DistributionName") -eq '<distribution-name>' }).GetValue("BasePath") + "\ext4.vhdx"
+```
+
+壓縮虛擬機鏡像
 
 ```powershell
 > diskpart
