@@ -1,0 +1,11 @@
+[Unit]
+Description=Foo Service
+After=network.target foo.socket
+Requires=foo.socket
+
+[Service]
+Type=simple
+ExecStart= /usr/local/bin/foo
+StandardInput=socket
+StandardOutput=socket
+StandardError=journal
