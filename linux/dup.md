@@ -1,3 +1,9 @@
+---
+title: "Linux DUP"
+tags: [linux, dup]
+draft: false
+---
+
 # Linux dup
 
 ![dup illustrate](inc/dup-illustrate-1.png)

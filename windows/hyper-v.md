@@ -1,3 +1,9 @@
+---
+title: "Windows Hyper-V"
+tags: [windows, vm]
+draft: false
+---
+
 # Windows Hyper-V
 
 Enable/Disable Hyper-V in Powershell

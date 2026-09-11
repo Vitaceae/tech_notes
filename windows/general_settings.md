@@ -1,3 +1,9 @@
+---
+title: "Windows General Settings"
+tags: [windows, settings]
+draft: false
+---
+
 # Windows General Settings
 
 Windows 設定筆記

@@ -1,3 +1,9 @@
+---
+title: "WSL"
+tags: [windows, wsl]
+draft: false
+---
+
 # WSL, Windows Subsystem for Linux
 
 WSL 設定筆記。僅針對 WSL2 以及 Windows 20H1-18917.1000 之後版本。

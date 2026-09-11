@@ -1,6 +1,12 @@
+---
+title: "WSL Mount USB Drive"
+tags: [windows, wsl]
+draft: false
+---
+
 # WSL Mount USB Drive
 
-Windows 掛載 USB 並傳遞給 WSL 的 Linux 環境，以便直接存取 USB 裝置
+Windows 掛載 USB 並傳遞給 WSL 的 Linux 環境以存取 USB 裝置
 
 ```powershell
 # Install USBIPD

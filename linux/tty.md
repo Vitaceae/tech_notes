@@ -1,3 +1,9 @@
+---
+title: "Linux TTY Subsystem"
+tags: [linux, tty]
+draft: false
+---
+
 # Linux TTY Subsystem
 
 ----
