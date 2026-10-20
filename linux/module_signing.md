@@ -2,6 +2,7 @@
 title: "Linux Module Signing"
 tags: [linux, kernel]
 draft: false
+date = "2026-10-20"
 ---
 
 # Linux Module Signing
