@@ -2,6 +2,7 @@
 title: "Linux systemd"
 tags: [linux, systemd]
 draft: false
+date = "2026-11-03"
 ---
 
 # Linux systemd
