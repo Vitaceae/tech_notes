@@ -2,7 +2,7 @@
 title: "C/C++ Programming - C Preprocessing"
 tags: [programming, c]
 draft: false
-date = "2026-10-12"
+date = "2026-11-26"
 ---
 
 # C Preprocessing
@@ -29,4 +29,21 @@ date = "2026-10-12"
 
 ```bash
 g++ -E xxx.c
+```
+
+----
+## __has_include
+
+分別於 C++17 和 C23 列入標準。Linux Kernel 現在(2026/11)仍以 C11 為主。若 backport 新功能到到舊版核心，僅  
+比對版本號 `LINUX_VERSION_CODE >= KERNEL_VERSION(x, y, z)` 可能出現相容性錯誤，判斷是否引入特定 header  
+file 可以解決不同版本間的移植問題。
+
+```c
+#if defined(__has_include)
+#  if __has_include(<linux/foo_new.h>)
+#    include <linux/foo_new.h>
+#  else
+#    include <linux/foo_old.h>
+#  endif
+#endif
 ```
